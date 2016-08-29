@@ -1,0 +1,227 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/activity_background"
+    tools:context="${relativePackage}.${activityClass}" >
+    
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="@dimen/outer_margin"
+        android:background="@color/layout_background"
+        android:gravity="top"
+        android:orientation="vertical"
+        android:padding="@dimen/layout_padding" >
+        
+        <TextView
+            android:id="@+id/KeyNameLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/field_top_margin"
+            android:labelFor="@+id/KeyName"
+            android:text="@string/label_key_name"
+            android:textSize="@dimen/label_text_size"
+        	android:textColor="@color/theme_dark" />
+
+        <EditText
+            android:id="@+id/KeyName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName|textCapWords"
+            android:textColor="@color/common_text"
+            android:textSize="@dimen/field_text_size" >
+
+            <requestFocus />
+        </EditText>
+        
+        <TextView
+            android:id="@+id/KeyWardsLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/field_top_margin"
+            android:text="@string/label_key_wards"
+            android:textSize="@dimen/label_text_size"
+        	android:textColor="@color/theme_dark" />
+
+        <LinearLayout
+            android:id="@+id/RowWardOne"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <EditText
+                android:id="@+id/Ward0"
+                android:nextFocusDown="@+id/Ward1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:inputType="number"
+                tools:ignore="LabelFor" />
+
+            <EditText
+                android:id="@+id/Ward1"
+                android:nextFocusDown="@+id/Ward2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:inputType="number"
+                tools:ignore="LabelFor" />
+
+            <EditText
+                android:id="@+id/Ward2"
+                android:nextFocusDown="@+id/Ward3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:inputType="number"
+                tools:ignore="LabelFor" />
+
+            <EditText
+                android:id="@+id/Ward3"
+                android:nextFocusDown="@+id/Ward4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:inputType="number"
+                tools:ignore="LabelFor" />
+
+            <EditText
+                android:id="@+id/Ward4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:inputType="number"
+                tools:ignore="LabelFor" />
+
+        </LinearLayout>
+        
+        <LinearLayout
+            android:id="@+id/RowWardTwo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <EditText
+                android:id="@+id/Ward5"
+                android:nextFocusDown="@+id/Ward6"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:inputType="number"
+                tools:ignore="LabelFor" />
+
+            <EditText
+                android:id="@+id/Ward6"
+                android:nextFocusDown="@+id/Ward7"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:inputType="number"
+                tools:ignore="LabelFor" />
+
+            <EditText
+                android:id="@+id/Ward7"
+                android:nextFocusDown="@+id/Ward8"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:inputType="number"
+                tools:ignore="LabelFor" />
+
+            <EditText
+                android:id="@+id/Ward8"
+                android:nextFocusDown="@+id/Ward9"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:inputType="number"
+                tools:ignore="LabelFor" />
+
+            <EditText
+                android:id="@+id/Ward9"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:inputType="number"
+                tools:ignore="LabelFor" />
+
+        </LinearLayout>
+        
+        <Button
+                android:id="@+id/RandomizeWardsBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:onClick="randomizeWards"
+                android:text="@string/button_randomize_wards"
+                android:textColor="@color/theme_main"
+                android:textSize="@dimen/field_text_size"
+                tools:ignore="ButtonStyle" />
+        
+        <TextView
+            android:id="@+id/KeyUuidLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/field_top_margin"
+            android:labelFor="@+id/KeyUuid"
+            android:text="@string/label_key_uuid"
+            android:textSize="@dimen/label_text_size"
+        	android:textColor="@color/theme_dark" />
+        
+        <TextView
+            android:id="@+id/KeyUuid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/field_top_margin"
+            android:labelFor="@+id/KeyUuid"
+            android:text="@string/empty_text"
+            android:textSize="@dimen/field_text_size"
+        	android:textColor="@color/common_text" />
+
+        <LinearLayout
+            android:id="@+id/Buttons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/button_margin_top"
+            android:orientation="horizontal" >
+            
+            <Button
+                android:id="@+id/SaveBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="save"
+                android:text="@string/button_save"
+                android:textColor="@color/theme_main"
+                android:textSize="@dimen/field_text_size"
+                tools:ignore="ButtonStyle" />
+            
+            <Button
+                android:id="@+id/ExportBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="export"
+                android:text="@string/button_export"
+                android:textColor="@color/theme_main"
+                android:textSize="@dimen/field_text_size"
+                tools:ignore="ButtonStyle" />
+            
+            <Button
+                android:id="@+id/RemoveBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="remove"
+                android:text="@string/button_remove"
+                android:textColor="@color/theme_main"
+                android:textSize="@dimen/field_text_size"
+                tools:ignore="ButtonStyle" />
+
+        </LinearLayout>
+
+        
+
+    </LinearLayout>
+
+</RelativeLayout>

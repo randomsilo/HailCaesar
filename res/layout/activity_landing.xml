@@ -1,0 +1,71 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/activity_background"
+    tools:context="${relativePackage}.${activityClass}" >
+
+    <LinearLayout
+        android:id="@+id/LockKeyContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:orientation="vertical"
+        tools:ignore="UselessParent" >
+
+        <TableLayout
+            android:id="@+id/ButtonTable"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <TableRow
+                android:id="@+id/PrimaryActions"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <ImageButton
+                    android:id="@+id/messagesBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="navigateMessages"
+                    android:contentDescription="@string/button_message"
+                    android:src="@drawable/button_message" />
+
+                <ImageButton
+                    android:id="@+id/identityBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="navigateIdentity"
+                    android:contentDescription="@string/button_identity"
+                    android:src="@drawable/button_identity" />
+
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/SecondaryActions"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <ImageButton
+                    android:id="@+id/locksBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="navigateLocks"
+                    android:contentDescription="@string/button_lock"
+                    android:src="@drawable/button_lock" />
+
+                <ImageButton
+                    android:id="@+id/keysBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="navigateKeys"
+                    android:contentDescription="@string/button_key"
+                    android:src="@drawable/button_key" />
+            </TableRow>
+
+        </TableLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,7 @@
+<paths xmlns:android="http://schemas.android.com/apk/res/android">
+    <files-path name="Messages" path="Messages/" />
+    <files-path name="Attachments" path="Attachments/"  />
+    <files-path name="Locks" path="Lock/"  />
+    <files-path name="Keys" path="Keys/"  />
+    <files-path name="Identity" path="Identity/"  />
+</paths>

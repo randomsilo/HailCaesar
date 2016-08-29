@@ -1,0 +1,125 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:background="@drawable/activity_background"
+    tools:context="${relativePackage}.${activityClass}" android:baselineAligned="false">
+
+    <LinearLayout
+        android:id="@+id/LockKeyContainer"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_margin="@dimen/outer_margin"
+        android:layout_weight="1"
+        android:background="@color/layout_background"
+        android:orientation="vertical"
+        android:padding="@dimen/layout_padding" >
+        
+        <LinearLayout
+            android:id="@+id/RowLock"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+            <ImageView
+	            android:id="@+id/LockImage"
+	            android:layout_width="48dip"
+         		android:layout_height="48dip"
+	            android:layout_gravity="center_horizontal|center_vertical"
+	            android:contentDescription="@string/image_lock"
+	            android:src="@drawable/lock" />
+	        <Spinner
+	            android:id="@+id/LockSpinner"
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/RowKey"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+	        <ImageView
+		        android:id="@+id/KeyImage"
+		        android:layout_width="48dip"
+         		android:layout_height="48dip"
+		        android:layout_gravity="center_horizontal|center_vertical"
+		        android:contentDescription="@string/image_key"
+		        android:src="@drawable/key" />
+	        <Spinner
+	            android:id="@+id/KeySpinner"
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content" />
+        </LinearLayout>
+        
+	</LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/MessageContainer"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginBottom="@dimen/outer_margin"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="@dimen/outer_margin"
+        android:layout_marginTop="@dimen/outer_margin"
+        android:layout_weight="1"
+        android:background="@color/layout_background"
+        android:orientation="vertical"
+        android:padding="@dimen/layout_padding" >
+
+        <TextView
+            android:id="@+id/MessageLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/field_top_margin"
+            android:labelFor="@+id/Message"
+            android:text="@string/label_message"
+            android:textSize="@dimen/label_text_size"
+        	android:textColor="@color/theme_dark" />
+        
+        <EditText
+            android:id="@+id/Message"
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:ems="10"
+            android:gravity="top|left"
+        	android:scrollHorizontally="false"
+        	android:scrollbars="vertical"
+            android:inputType="textMultiLine|textNoSuggestions|textCapSentences"
+            tools:ignore="NestedWeights" >
+
+            <requestFocus />
+        </EditText>
+        
+        <LinearLayout
+            android:id="@+id/Buttons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/button_margin_top"
+            android:orientation="horizontal" >
+	        <Button
+	            android:id="@+id/SendMessageBtn"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="1"
+	            android:onClick="sendMessage"
+	            android:text="@string/button_send_message"
+	            android:textColor="@color/theme_main"
+	            android:textSize="@dimen/field_text_size"
+	            tools:ignore="ButtonStyle" />
+	        
+	        <Button
+	            android:id="@+id/ClearMessageBtn"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="1"
+	            android:onClick="clearMessage"
+	            android:text="@string/button_clear_message"
+	            android:textColor="@color/theme_main"
+	            android:textSize="@dimen/field_text_size"
+	            tools:ignore="ButtonStyle" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

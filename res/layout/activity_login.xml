@@ -1,0 +1,68 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/activity_background"
+    tools:context="${relativePackage}.${activityClass}" >    
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="@dimen/outer_margin"
+        android:background="@color/layout_background"
+        android:gravity="top"
+        android:orientation="vertical"
+        android:padding="@dimen/layout_padding" >
+
+        <TextView
+            android:id="@+id/InstructionsLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:labelFor="@+id/Instructions"
+            android:text="@string/label_instructions"
+            android:textSize="@dimen/title_text_size"
+        	android:textColor="@color/theme_dark" />
+        
+        <TextView
+            android:id="@+id/Instructions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:labelFor="@+id/Instructions"
+            android:text="@string/instructions_login"
+            android:textSize="@dimen/label_text_size"
+        	android:textColor="@color/common_text" />
+        
+        <TextView
+            android:id="@+id/PasswordLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/field_top_margin"
+            android:labelFor="@+id/Password"
+            android:text="@string/label_password"
+            android:textSize="@dimen/label_text_size"
+        	android:textColor="@color/theme_dark" />
+
+        <EditText
+            android:id="@+id/Password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword|textNoSuggestions|textCapSentences"
+            android:textSize="@dimen/field_text_size"
+        	android:textColor="@color/common_text" >
+            <requestFocus />
+        </EditText>
+
+        <Button
+            android:id="@+id/LoginBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/button_margin_top"
+            android:text="@string/button_login"
+            android:textSize="@dimen/field_text_size"
+        	android:textColor="@color/theme_main"
+        	android:onClick="login" />
+
+    </LinearLayout>
+
+</RelativeLayout>
